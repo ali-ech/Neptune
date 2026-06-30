@@ -36,13 +36,13 @@ export const ASSETS = {
 } as const;
 
 export const COLORS = {
-  primary: '#00AEEF',
-  primaryDark: '#0090D0',
-  primaryLight: '#E8F6FC',
-  accent: '#00AEEF',
+  primary: '#0077B6',
+  primaryDark: '#0077B6',
+  primaryLight: '#E6F4FA',
+  accent: '#0077B6',
   bgPrimary: '#FFFFFF',
-  bgSecondary: '#F4FAFD',
-  textPrimary: '#0A5F8A',
-  textBody: '#4A6578',
-  textMuted: '#7A9BB0',
+  bgSecondary: '#F0F8FC',
+  textPrimary: '#0077B6',
+  textBody: '#3D5A6C',
+  textMuted: '#6B8FA3',
 } as const;

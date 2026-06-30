@@ -12,13 +12,13 @@ function DropletIcon({ id }: { id: string }) {
       <path
         d="M12 2C12 2 4 12 4 17.5C4 21.1 7.6 24 12 24C16.4 24 20 21.1 20 17.5C20 12 12 2 12 2Z"
         fill={`url(#dropletGrad-${id})`}
-        stroke="#00AEEF"
+        stroke="#0077B6"
         strokeWidth="1.2"
       />
       <defs>
         <linearGradient id={`dropletGrad-${id}`} x1="12" y1="2" x2="12" y2="24" gradientUnits="userSpaceOnUse">
-          <stop stopColor="#E8F6FC" />
-          <stop offset="1" stopColor="#BAE6FD" />
+          <stop stopColor="#E6F4FA" />
+          <stop offset="1" stopColor="#B8DFF0" />
         </linearGradient>
       </defs>
     </svg>
