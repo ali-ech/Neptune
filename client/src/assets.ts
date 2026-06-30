@@ -42,7 +42,7 @@ export const COLORS = {
   accent: '#00AEEF',
   bgPrimary: '#FFFFFF',
   bgSecondary: '#F4FAFD',
-  textPrimary: '#0C4A6E',
-  textBody: '#5A6B7D',
-  textMuted: '#94A3B8',
+  textPrimary: '#0A5F8A',
+  textBody: '#4A6578',
+  textMuted: '#7A9BB0',
 } as const;

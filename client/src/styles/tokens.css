@@ -1,51 +1,58 @@
 :root {
-  /* Neptune Mineral Water — vibrant cyan brand blue */
-  --primary:          #00AEEF;
-  --primary-dark:     #0090D0;
-  --primary-deeper:   #0077B6;
-  --primary-light:    #E8F6FC;
-  --primary-soft:     #F4FAFD;
+  /* Neptune Mineral Water — brand cyan blue */
+  --brand-blue:         #00AEEF;
+  --brand-blue-dark:    #0090D0;
+  --brand-blue-deep:    #0077B6;
+  --brand-blue-rgb:     0, 174, 239;
+  --brand-blue-deep-rgb: 0, 119, 182;
 
-  --accent:           #00AEEF;
-  --accent-dark:      #0090D0;
-  --accent-light:     #D4F1FA;
+  --primary:            var(--brand-blue);
+  --primary-dark:       var(--brand-blue-dark);
+  --primary-deeper:     var(--brand-blue-deep);
+  --primary-light:      #E8F6FC;
+  --primary-soft:       #F4FAFD;
 
-  --brand-gradient:   linear-gradient(135deg, #00AEEF 0%, #0090D0 45%, #0077B6 100%);
-  --brand-gradient-h: linear-gradient(90deg, #0077B6 0%, #00AEEF 100%);
+  --accent:             var(--brand-blue);
+  --accent-dark:        var(--brand-blue-dark);
+  --accent-light:       #D4F1FA;
 
-  --bg-primary:       #FFFFFF;
-  --bg-secondary:     #F4FAFD;
-  --bg-deep:          #E8F4FD;
-  --bg-glass:         rgba(255, 255, 255, 0.88);
-  --bg-overlay:       rgba(0, 119, 182, 0.45);
+  --brand-gradient:     linear-gradient(135deg, #00AEEF 0%, #0090D0 45%, #0077B6 100%);
+  --brand-gradient-h:   linear-gradient(90deg, #0077B6 0%, #00AEEF 100%);
+  --brand-gradient-soft: linear-gradient(180deg, #EBF8FF 0%, #F4FAFD 55%, #FFFFFF 100%);
 
-  --water-lightest:   #EBF8FF;
-  --water-light:      #BAE6FD;
-  --water-mid:        #7DD3FC;
-  --water-core:       #00AEEF;
-  --water-deep:       #0090D0;
-  --water-deepest:    #0077B6;
+  --bg-primary:         #FFFFFF;
+  --bg-secondary:       #F4FAFD;
+  --bg-deep:            #E8F4FD;
+  --bg-glass:           rgba(255, 255, 255, 0.88);
+  --bg-overlay:         rgba(var(--brand-blue-deep-rgb), 0.45);
 
-  --text-primary:     #0C4A6E;
-  --text-secondary:   #1A5F7A;
-  --text-body:        #5A6B7D;
-  --text-muted:       #94A3B8;
-  --text-on-dark:     #FFFFFF;
+  --water-lightest:     #EBF8FF;
+  --water-light:        #BAE6FD;
+  --water-mid:          #7DD3FC;
+  --water-core:         var(--brand-blue);
+  --water-deep:         var(--brand-blue-dark);
+  --water-deepest:      var(--brand-blue-deep);
 
-  --border-light:     rgba(0, 174, 239, 0.15);
-  --border-mid:       rgba(0, 174, 239, 0.3);
-  --border-strong:    rgba(0, 144, 208, 0.5);
+  --text-primary:       #0A5F8A;
+  --text-secondary:     #1A7AA8;
+  --text-body:          #4A6578;
+  --text-muted:         #7A9BB0;
+  --text-on-dark:       #FFFFFF;
 
-  --white-pure:       #FFFFFF;
-  --white-soft:       #F8FCFF;
-  --white-glass:      rgba(255, 255, 255, 0.92);
+  --border-light:       rgba(var(--brand-blue-rgb), 0.15);
+  --border-mid:         rgba(var(--brand-blue-rgb), 0.3);
+  --border-strong:        rgba(0, 144, 208, 0.5);
 
-  --radius-card:      16px;
-  --radius-btn:       999px;
-  --radius-sm:        8px;
-  --shadow-card:      0 4px 24px rgba(0, 174, 239, 0.1);
-  --shadow-card-hover: 0 8px 32px rgba(0, 174, 239, 0.18);
-  --shadow-header:    0 2px 16px rgba(0, 60, 90, 0.06);
+  --white-pure:         #FFFFFF;
+  --white-soft:         #F8FCFF;
+  --white-glass:        rgba(255, 255, 255, 0.92);
+
+  --radius-card:        16px;
+  --radius-btn:         999px;
+  --radius-sm:          8px;
+  --shadow-card:        0 4px 24px rgba(var(--brand-blue-rgb), 0.1);
+  --shadow-card-hover:  0 8px 32px rgba(var(--brand-blue-rgb), 0.18);
+  --shadow-header:      0 2px 16px rgba(var(--brand-blue-deep-rgb), 0.18);
 
   --font-heading: 'Inter', 'Montserrat', system-ui, sans-serif;
   --font-body: 'Inter', 'Montserrat', system-ui, sans-serif;
