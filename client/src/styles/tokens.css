@@ -52,6 +52,8 @@
   --shadow-card-hover:  0 8px 32px rgba(var(--brand-blue-rgb), 0.18);
   --shadow-header:      0 2px 16px rgba(var(--brand-blue-rgb), 0.22);
 
+  --hero-vh-fallback:   100lvh;
+
   --font-heading: 'Inter', 'Montserrat', system-ui, sans-serif;
   --font-body: 'Inter', 'Montserrat', system-ui, sans-serif;
 }

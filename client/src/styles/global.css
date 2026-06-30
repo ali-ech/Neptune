@@ -428,31 +428,46 @@ a, button { text-decoration: none; color: inherit; border: none; background: non
 .ripple-btn { position: relative; overflow: hidden; }
 
 /* Hero */
-.hero {
+.hero:not(.hero--o1) {
   min-height: calc(100vh - 76px);
-  display: flex; align-items: center;
-  position: relative; overflow: hidden;
+  display: flex;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
   z-index: 20;
 }
-.hero--o1 {
-  min-height: 100vh;
-  min-height: 100svh;
+.hero--o1,
+.home-page .home-hero {
+  min-height: var(--hero-vh, 100lvh);
+  height: var(--hero-vh, 100lvh);
   display: flex;
   align-items: center;
   justify-content: center;
   margin-top: 0;
   padding: 0;
+  position: relative;
+  overflow: hidden;
+  z-index: 20;
+  flex-shrink: 0;
+  width: 100%;
 }
 .hero--o1 .hero-bg-image {
   position: absolute;
   inset: 0;
+  width: 100%;
+  height: 100%;
+  min-height: 100%;
   background-size: cover;
   background-position: 42% 33%;
+  background-repeat: no-repeat;
   z-index: 0;
 }
 .hero--o1 .hero-bg-overlay {
   position: absolute;
   inset: 0;
+  width: 100%;
+  height: 100%;
+  min-height: 100%;
   background: rgba(0, 0, 0, 0.3);
   z-index: 1;
 }
@@ -461,8 +476,15 @@ a, button { text-decoration: none; color: inherit; border: none; background: non
   z-index: 2;
   text-align: center;
   max-width: 780px;
+  width: 100%;
   padding: 120px 24px 80px;
   color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  flex: 1;
+  min-height: 100%;
 }
 .hero-o1-title {
   font-family: var(--font-heading);
@@ -482,39 +504,26 @@ a, button { text-decoration: none; color: inherit; border: none; background: non
 }
 
 @media (max-width: 768px) {
-  .hero--o1 {
-    min-height: 100svh;
-    min-height: 100dvh;
-    height: 100svh;
-    height: 100dvh;
-    align-items: center;
-    justify-content: center;
+  .hero--o1,
+  .home-page .home-hero {
+    min-height: var(--hero-vh, 100lvh);
+    height: var(--hero-vh, 100lvh);
   }
   .hero--o1 .hero-bg-image {
-    background-position: center 28%;
-    background-size: cover;
-    min-height: 100%;
-  }
-  .hero--o1 .hero-bg-overlay {
-    min-height: 100%;
+    background-position: center 30%;
   }
   .hero-o1-content {
-    padding: max(140px, 22vh) 20px max(96px, 16vh);
+    padding: calc(72px + env(safe-area-inset-top, 0px)) 20px calc(48px + env(safe-area-inset-bottom, 0px));
     max-width: 100%;
     width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    flex: 1;
   }
   .hero-o1-title {
-    font-size: clamp(2.1rem, 9.5vw, 3rem);
+    font-size: clamp(2rem, 9.5vw, 3rem);
     line-height: 1.12;
     margin-bottom: 20px;
   }
   .hero-o1-sub {
-    font-size: clamp(1.08rem, 4.5vw, 1.25rem);
+    font-size: clamp(1.05rem, 4.5vw, 1.25rem);
     line-height: 1.65;
     max-width: 38ch;
     margin: 0 auto;
@@ -523,17 +532,11 @@ a, button { text-decoration: none; color: inherit; border: none; background: non
 }
 
 @media (max-width: 480px) {
-  .hero--o1 {
-    min-height: 100svh;
-    min-height: 100dvh;
-    height: 100svh;
-    height: 100dvh;
-  }
   .hero-o1-content {
-    padding: max(132px, 20vh) 16px max(88px, 14vh);
+    padding: calc(68px + env(safe-area-inset-top, 0px)) 16px calc(40px + env(safe-area-inset-bottom, 0px));
   }
   .hero-o1-title {
-    font-size: clamp(2rem, 10.5vw, 2.75rem);
+    font-size: clamp(1.95rem, 10.5vw, 2.75rem);
   }
 }
 
@@ -2240,23 +2243,6 @@ a, button { text-decoration: none; color: inherit; border: none; background: non
     min-height: auto;
     align-items: flex-start;
     padding-top: 12px;
-  }
-  .hero.hero--o1 {
-    min-height: 100svh;
-    min-height: 100dvh;
-    height: 100svh;
-    height: 100dvh;
-    align-items: center;
-    justify-content: center;
-    padding: 0;
-    flex-shrink: 0;
-  }
-  .hero.hero--o1 .hero-bg-image,
-  .hero.hero--o1 .hero-bg-overlay {
-    min-height: 100%;
-  }
-  .hero-o1-content {
-    padding: max(140px, 22vh) 20px max(96px, 16vh);
   }
   .hero-grid {
     grid-template-columns: 1fr;
